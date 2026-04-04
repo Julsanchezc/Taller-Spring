@@ -3,7 +3,7 @@ package org.example.conversor.ConversorTemperatura;
 import org.example.conversor.Conversor;
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component
 public class ConversorFahrenheitACelsius implements Conversor {
 
     @Override

@@ -9,7 +9,8 @@ public class ConversorApp {
 
     private final Conversor conversor;
 
-    public ConversorApp(Conversor conversor) {
+    public ConversorApp(
+            @Qualifier("conversorFahrenheitACelsius") Conversor conversor) {
         this.conversor = conversor;
     }
 
