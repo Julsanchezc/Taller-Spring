@@ -2,7 +2,7 @@
 
 ## Integrantes del grupo
 - Omar Daniel Calvache Madroñero
-- Julia Sanchez
+- Julia Santiago Sanchez Castro
 
 ---
 
