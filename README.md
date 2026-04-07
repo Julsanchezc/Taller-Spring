@@ -3,6 +3,7 @@
 ## Integrantes del grupo
 - Omar Daniel Calvache Madroñero
 - Julia Santiago Sanchez Castro
+- Kelly Yhojanna Marin
 
 ---
 
