@@ -6,6 +6,33 @@
 
 ---
 
+
+# Taller 1 – Ejercicio 1
+## Sistema de Generación de Alertas (Beans manuales)
+En este proyecto se desarrolló un sistema para generar alertas internas utilizando Spring.
+Se aplicó inyección de dependencias mediante beans definidos manualmente, 
+siguiendo el principio de bajo acoplamiento.
+
+Se definieron las interfaces GeneradorAlerta y SistemaMonitoreo, junto con múltiples 
+implementaciones (alertas críticas e informativas). Esto permite que el sistema 
+sea fácilmente extensible agregando nuevas estrategias de alerta.
+
+### ¿Cómo se utiliza?
+Todas las implementaciones están registradas como beans de forma manual en la clase
+de configuración 'AppConfig'.
+El sistema de monitoreo obtiene el generador de alertas a través de inyección de dependencias:
+
+ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+SistemaMonitoreo sistema = context.getBean(SistemaMonitoreo.class);
+sistema.ejecutarAlerta();
+Para cambiar el tipo de alerta, solo se debe modificar la inyección de dependencias en AppConfig:
+
+@Bean
+public SistemaMonitoreo sistemaMonitoreo(GeneradorAlerta alerta) {
+    return new SistemaMonitoreoImpl(alerta); //Aquí se puede pasar alertaCritica() o alertaInformativa()
+}
+
+---
 # Taller 1 – Ejercicio 2
 
 ## Implementación de Conversores
@@ -71,3 +98,4 @@ de negocio.
 - RestTemplate (Spring Web)
 - Jackson (mapeo JSON → DTOs)
 - Java 17
+
