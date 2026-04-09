@@ -1,4 +1,4 @@
-# Taller-Spring
+# Taller-Spring - Grupo 3
 
 ## Integrantes del grupo
 - Omar Daniel Calvache Madroñero
